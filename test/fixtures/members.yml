@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  active: false
+  is_member: false
+  join_date: 2014-01-05 21:05:15
+
+two:
+  name: MyString
+  active: false
+  is_member: false
+  join_date: 2014-01-05 21:05:15

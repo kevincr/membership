@@ -1,0 +1,25 @@
+<h1>HBA Memberships</h1>
+
+<table >
+  <tr>
+  <th>ID</th>
+  <th align="left">Company Name</th>
+  <th>Active</th>
+  <th>Member</th>
+  <th>Join Date</th>
+
+  </tr>
+  <% @members.each do |member|%>
+  <tr>
+    <td align="right"><%= member.id %></td>
+    <td ><%= member.name %> </td>
+    <td align="center"><% if member.is_member %>X <%end %></td>
+    <td align="center"><% if member.active %>X<%end%></td>
+    <td><%=  member.join_date.strftime("%m/%d/%Y") %></td>
+  </tr>
+
+  <% end %>
+</table>
+<button type='button' class="new_member">
+<%= link_to "Add New Member", new_member_path %>
+</button>
