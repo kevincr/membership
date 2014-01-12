@@ -1,3 +1,10 @@
 <h1>HBA Memberships</h1>
 
-<%= link_to "<div class='new_link'>Add New Member</div>", new_member_path %>
+<button type='button' class="new_member">
+  <%= link_to 'Show Members', members_path%>
+</button>
+
+<button type='button' class="new_member">
+<%= link_to "Add New Member", new_member_path %>
+</button>
+
