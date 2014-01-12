@@ -2,10 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+body {
+  @include container;
+  @include susy-grid-background;
+  background-color:lightgray;
   align-content: center;
   padding: 1em;
 }
+//.main_container{
+////  @include set-container_width(8);
+//  @include span-columns(12);
+//}
 .new_member{
   background-color: slategray;
   border: 0;
@@ -14,4 +29,26 @@ body{
 .new_member a{
   text-decoration: none;
   color: black;
+}
+
+.footer{
+  @include span-columns(12)
+}
+
+.members_list{
+  @include span-columns(4, 5);
+  background: yellow;
+}
+
+
+.members_table {
+ background-color: lightblue;
+ width: 100%;
+ align-content: center;
+}
+
+.members_table th{
+
+  background-color: blue;
+  color: white;
 }
