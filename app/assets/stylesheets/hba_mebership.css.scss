@@ -28,15 +28,34 @@ td {border: 1px solid black;}
 }
 .footer{
   background-color: #EFEFEF;
+  margin-top:30px;
 }
 .new_member{
-  background-color: #EFEFEF;
+  background-color: #000;
+  text-decoration-color: white;
   border: 0;
+  color: #FFFFFF !important;
+  font-size: 1.5em;
+  border-radius: .3125em;
 
-}
-.new_member a{
-  text-decoration: none;
-  color: black;
+  &:hover{
+    background-color: #ABABAB;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+
+     &:visited {
+      color: #fff;
+     }
+
+    &:hover {
+      color: #fff;
+      background-color: #ABABAB;
+    }
+
+  }
 }
 
 .footer{
@@ -52,12 +71,17 @@ td {border: 1px solid black;}
 .members_table {
 // background-color: lightblue;
   border-spacing: 0px;
- width: 100%;
- align-content: center;
+  width: 100%;
+  align-content: center;
   border: solid black thin;
 }
 
 .members_table th{
   background-color: blue;
   color: white;
+}
+
+.veritical_spacer{
+  padding:5px;
+  width: 100%;
 }
