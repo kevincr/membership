@@ -1,0 +1,28 @@
+<h1> New HBA Members</h1>
+
+<%= form_for :member, url:members_path do |f| %>
+    <div class="company_name">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="member_is_member">
+      <%= f.label "Member" %><br>
+      <%= f.check_box :is_member, {},checked_value="yes",unchecked_value="no"  %>
+    </div>
+    <div class="member_active">
+      <%= f.label :active %><br>
+      <%= f.check_box :active, {},checked_value="yes",unchecked_value="no"  %>
+    </div>
+    <span class="filler"></span>
+    <div class="member_join_date">
+      <%= f.label :join_date %><br>
+      <%= f.date_select :join_date %>
+    </div>
+
+
+    <p>
+      <%= f.submit %>
+    </p>
+    <%= link_to 'Back', members_path%>
+<% end %>

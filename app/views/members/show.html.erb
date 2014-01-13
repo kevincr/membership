@@ -1,5 +1,7 @@
 <p>
   <strong>Member:</strong>
+
   <%=@member.id%> - <%= @member.name%> <%= @member.active%> <%= @member.is_member %> <%= @member.join_date.strftime("%m/%d/%Y") %>
+  Sucessfully created member <%= @member.name%>.
 </p>
 <%= link_to 'Back', members_path%>

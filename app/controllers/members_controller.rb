@@ -10,8 +10,16 @@ class MembersController < ApplicationController
     redirect_to @member
   end
 
+  def destroy
+
+  end
+
   def index
     @members = Member.all
+  end
+
+  def edit
+
   end
 
   def show

@@ -53,3 +53,9 @@ ruby "2.0.0"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
