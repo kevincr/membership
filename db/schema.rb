@@ -11,13 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140112192149) do
+ActiveRecord::Schema.define(version: 20140113053217) do
+
+  create_table "addresses", force: true do |t|
+    t.string   "address_type"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.string   "title"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "contacts", ["member_id"], name: "index_contacts_on_member_id", using: :btree
 
   create_table "members", force: true do |t|
     t.string   "name"
     t.boolean  "active"
     t.boolean  "is_member"
     t.datetime "join_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "phone_numbers", force: true do |t|
+    t.string   "phone_type"
+    t.string   "Phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

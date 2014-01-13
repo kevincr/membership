@@ -1,4 +1,10 @@
 HBAMembership::Application.routes.draw do
+  resources :contacts
+
+  resources :addresses
+
+  resources :phone_numbers
+
   resources :users
 
   get "users/new"
@@ -7,7 +13,9 @@ HBAMembership::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :members
+  resources :members do
+    resources :contacts
+  end
   root 'hba_mebership#index'
 
   # Example of regular route:

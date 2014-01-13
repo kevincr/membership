@@ -19,7 +19,16 @@
       <%= f.label :join_date %><br>
       <%= f.date_select :join_date %>
     </div>
+    <%= form_for :contacts do |contact| %>
+        <%= contact.label "title" %><br>
+        <%= contact.text_field :title %>
 
+        <%= contact.label "First Name" %><br>
+        <%= contact.text_field :first_name %>
+
+        <%= contact.label "Last Name" %><br>
+        <%= contact.text_field :last_name %>
+    <% end %>
 
   <p>
     <%= f.submit %>
