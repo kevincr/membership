@@ -1,14 +1,20 @@
 class MembersController < ApplicationController
 
   def new
-
+    @member = Member.new
   end
+
   def create
     #render text: params[:member].inspect
     @member = Member.new(member_params)
 
-    @member.save
-    redirect_to @member
+    puts @member.name
+
+    if @member.save
+      redirect_to @member
+    else
+      render new
+    end
   end
 
   def destroy
