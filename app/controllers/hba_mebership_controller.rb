@@ -3,3 +3,4 @@ class HbaMebershipController < ApplicationController
   end
 
 end
+

@@ -10,6 +10,19 @@
       </ul>
     </div>
   <% end %>
+    <div class="member_is_member field">
+      <%= f.label "Member" %><br>
+      <%= f.check_box :is_member, {},checked_value="yes",unchecked_value="no"  %>
+    </div>
+    <div class="member_active field">
+      <%= f.label :active %><br>
+      <%= f.check_box :active, {},checked_value="yes",unchecked_value="no"  %>
+    </div>
+    <span class="filler"></span>
+    <div class="member_join_date field">
+      <%= f.label :join_date %><br>
+      <%= f.date_select :join_date %>
+    </div>
 
   <div class="field">
     <%= f.label :name %><br>

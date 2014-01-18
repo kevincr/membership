@@ -13,9 +13,17 @@ HBAMembership::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  #map.resources :members, :has_many => :contacts
+
   resources :members do
     resources :contacts
   end
+
+  #ActionController::Routing::Routes.draw do |map|
+  #  map.resources :members, :has_many => :contacts
+  #  map.resources :contacts
+  #end
+
   root 'hba_mebership#index'
 
   # Example of regular route:
